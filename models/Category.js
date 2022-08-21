@@ -6,7 +6,17 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define columns
+    // define columns, I used this as a query identifier by defining id and category columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
