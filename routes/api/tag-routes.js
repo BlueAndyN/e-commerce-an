@@ -63,7 +63,6 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-   // used the delete from product routes
   Tag.update(req.body, {
     where: {
         id: req.params.id
